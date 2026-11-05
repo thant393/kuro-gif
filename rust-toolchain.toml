@@ -1,0 +1,5 @@
+[toolchain]
+channel = "nightly-2026-06-17"
+components = ["rust-src"]
+targets = ["armv7-linux-androideabi", "aarch64-linux-android", "i686-linux-android", "x86_64-linux-android"]
+profile = "minimal"
