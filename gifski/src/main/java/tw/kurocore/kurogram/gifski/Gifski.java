@@ -1,4 +1,4 @@
-package app.nekogram.gifski;
+package tw.kurocore.kurogram.gifski;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;

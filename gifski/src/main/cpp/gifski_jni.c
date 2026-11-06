@@ -8,7 +8,7 @@
 #define PTR(h) ((gifski *)(uintptr_t)(h))
 
 JNIEXPORT jlong JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeNew(JNIEnv *env, jclass cls, jint width, jint height,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeNew(JNIEnv *env, jclass cls, jint width, jint height,
                                           jint quality, jboolean fast, jshort repeat) {
     GifskiSettings s = {0};
 
@@ -23,7 +23,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeNew(JNIEnv *env, jclass cls, jint wi
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeSetMotionQuality(JNIEnv *env, jclass cls, jlong handle,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeSetMotionQuality(JNIEnv *env, jclass cls, jlong handle,
                                                        jint quality) {
     if (!handle) return GIFSKI_NULL_ARG;
 
@@ -31,7 +31,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeSetMotionQuality(JNIEnv *env, jclass
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeSetLossyQuality(JNIEnv *env, jclass cls, jlong handle,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeSetLossyQuality(JNIEnv *env, jclass cls, jlong handle,
                                                       jint quality) {
     if (!handle) return GIFSKI_NULL_ARG;
 
@@ -39,7 +39,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeSetLossyQuality(JNIEnv *env, jclass 
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeSetExtraEffort(JNIEnv *env, jclass cls, jlong handle,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeSetExtraEffort(JNIEnv *env, jclass cls, jlong handle,
                                                      jboolean extra) {
     if (!handle) return GIFSKI_NULL_ARG;
 
@@ -47,7 +47,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeSetExtraEffort(JNIEnv *env, jclass c
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeAddFixedColor(JNIEnv *env, jclass cls, jlong handle, jint r,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeAddFixedColor(JNIEnv *env, jclass cls, jlong handle, jint r,
                                                     jint g, jint b) {
     if (!handle) return GIFSKI_NULL_ARG;
 
@@ -60,7 +60,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeAddFixedColor(JNIEnv *env, jclass cl
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeSetFileOutput(JNIEnv *env, jclass cls, jlong handle,
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeSetFileOutput(JNIEnv *env, jclass cls, jlong handle,
                                                     jstring path) {
     if (!handle || !path) return GIFSKI_NULL_ARG;
 
@@ -72,7 +72,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeSetFileOutput(JNIEnv *env, jclass cl
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeAddFrameBitmap(
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeAddFrameBitmap(
         JNIEnv *env,
         jclass cls,
         jlong handle,
@@ -109,7 +109,7 @@ Java_app_nekogram_gifski_GifskiNative_nativeAddFrameBitmap(
 }
 
 JNIEXPORT jint JNICALL
-Java_app_nekogram_gifski_GifskiNative_nativeFinish(JNIEnv *env, jclass cls, jlong handle) {
+Java_tw_kurocore_kurogram_gifski_GifskiNative_nativeFinish(JNIEnv *env, jclass cls, jlong handle) {
     if (!handle) return GIFSKI_NULL_ARG;
     return gifski_finish(PTR(handle));
 }

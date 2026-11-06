@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "app.nekogram.gifski"
+    namespace = "tw.kurocore.kurogram.gifski"
     compileSdk {
         version = release(37)
     }
@@ -59,7 +59,7 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "app.nekogram.gifski"
+            groupId = "tw.kurocore.kurogram"
             artifactId = "gifski"
             version = "1.0.1"
 
@@ -70,7 +70,7 @@ publishing {
             pom {
                 name.set("Gifski")
                 description.set("Highest-quality GIF encoder")
-                url.set("https://github.com/Nekogram/gifski")
+                url.set("https://github.com/thant393/kuro-gif")
 
                 licenses {
                     license {
@@ -82,14 +82,14 @@ publishing {
 
                 developers {
                     developer {
-                        name.set("Nekogram")
-                        url.set("https://github.com/Nekogram")
+                        name.set("Kurogram")
+                        url.set("https://github.com/thant393")
                     }
                 }
 
                 scm {
-                    connection.set("scm:git:https://github.com/Nekogram/gifski.git")
-                    url.set("https://github.com/Nekogram/gifski")
+                    connection.set("scm:git:https://github.com/thant393/kuro-gif.git")
+                    url.set("https://github.com/thant393/kuro-gif")
                 }
             }
         }

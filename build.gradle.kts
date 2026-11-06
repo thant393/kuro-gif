@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.publish)
 }
 
-group = "app.nekogram"
+group = "tw.kurocore.kurogram"
 
 nexusPublishing {
     repositories {
